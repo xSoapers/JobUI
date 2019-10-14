@@ -165,7 +165,7 @@ class EconomyJob extends PluginBase implements Listener{
 			$job = $this->player->get($player->getName());
 			$form->setContent("§eYour job $job");
 			$form->addButton("§bJoin\n§3Join Job", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("§3Status\n§bStatus Job", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("§bStatus\n§3Status Job", 1, "http://avengetech.me/items/271-0.png");
 			$form->addButton("§bAbout\n§3About, Money", 1, "http://avengetech.me/items/271-0.png");
 			$form->addButton("Retire\n§cBack", 1, "http://avengetech.me/items/271-0.png");
 			$form->sendToPlayer($player);
@@ -204,10 +204,10 @@ class EconomyJob extends PluginBase implements Listener{
 			});
 			$form->setTitle("§bJobs");
 			$form->setcontent("§b➜§bPick a job");
-			$form->addButton("§b➜§3Wood-Cutter\⸕n2$", 1, "http://avengetech.me/items/17-0.png");
-			$form->addButton("§b➜§bMiner\⸕n$0.5", 1, "http://avengetech.me/items/1-0.png");
-			$form->addButton("§b➜§3Melon Farmer\⸕n5$", 1, "http://avengetech.me/items/103-0.png");
-			$form->addButton("§b➜§bPumpkin Farmer\⸕n6$", 1, "http://avengetech.me/items/86-0.png");
+			$form->addButton("§b➜§bWood-Cutter\n§3⸕2$", 1, "http://avengetech.me/items/17-0.png");
+			$form->addButton("§b➜§bMiner\n§3⸕0.5$", 1, "http://avengetech.me/items/1-0.png");
+			$form->addButton("§b➜§bMelon Farmer\n§3⸕5$", 1, "http://avengetech.me/items/103-0.png");
+			$form->addButton("§b➜§bPumpkin Farmer\n§3⸕6$", 1, "http://avengetech.me/items/86-0.png");
 			$form->sendToPlayer($player);
 			return $form;
 	}
