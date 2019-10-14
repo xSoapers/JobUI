@@ -146,7 +146,7 @@ class EconomyJob extends PluginBase implements Listener{
 					break;
 					
 					case "1";
-					$player->sendMessage("§7[§bx§6Jobs§7] §aYour Job : ".$this->player->get($player->getName()));
+					$player->sendMessage("§7[§6Jobs§7] §aYour Job : ".$this->player->get($player->getName()));
 					break;
 					
 					case "2";
@@ -156,18 +156,18 @@ class EconomyJob extends PluginBase implements Listener{
 					case "3";
 					$job = $this->player->get($player->getName());
 					$this->player->remove($player->getName());
-					$player->sendMessage("§7[§bx§6Jobs§7] §cYou have left this job. \"$job\"");
+					$player->sendMessage("§7[§6Job§7] §cYou have left this job. \"$job\"");
 					break;
 					
 				}
 			});
-			$form->setTitle("§bJobUI");
+			$form->setTitle("§bJob");
 			$job = $this->player->get($player->getName());
-			$form->setContent("Your job $job");
-			$form->addButton("Join\nJoin Job", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("Status\nStatus Job", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("About\nAbout, Money", 1, "http://avengetech.me/items/271-0.png");
-			$form->addButton("Retire\nBack", 1, "http://avengetech.me/items/271-0.png");
+			$form->setContent("§eYour job $job");
+			$form->addButton("Join\n§3Join Job", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("Status\n§bStatus Job", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("About\n§bAbout, Money", 1, "http://avengetech.me/items/271-0.png");
+			$form->addButton("Retire\n§cBack", 1, "http://avengetech.me/items/271-0.png");
 			$form->sendToPlayer($player);
 			return $form;
 	}
@@ -181,8 +181,8 @@ class EconomyJob extends PluginBase implements Listener{
 				}
 				switch($result){
 					case "0";
-					$this->player->set($player->getName(), "tree-cutter");
-					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now §eTree Cutter");
+					$this->player->set($player->getName(), "wood-cutter");
+					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now §eWood Cutter");
 					break;
 					
 					case "1";
@@ -192,27 +192,21 @@ class EconomyJob extends PluginBase implements Listener{
 					
 					case "2";
 					$this->player->set($player->getName(), "melon");
-					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now §eMelon");
+					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now to harvest §eMelons");
 					break;
 					
 					case "3";
 					$this->player->set($player->getName(), "pumpkin");
-					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now §ePumpkin");
+					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now to harvest §ePumpkins");
 					break;
-					
-					case "4";
-					$this->player->set($player->getName(), "flower");
-					$player->sendMessage("§7[§6Jobs§7] §aYour Job is now §eFlower");
-					break;
-					
+
 				}
 			});
 			$form->setTitle("§bJobUi");
-			$form->addButton("Tree Cutter\n2$", 1, "http://avengetech.me/items/17-0.png");
-			$form->addButton("Miner\n$1", 1, "http://avengetech.me/items/1-0.png");
-			$form->addButton("Melon\n5$", 1, "http://avengetech.me/items/103-0.png");
-			$form->addButton("Pumpkin\n5$", 1, "http://avengetech.me/items/86-0.png");
-			$form->addButton("Flower\n1$", 1, "http://avengetech.me/items/37-0.png");
+			$form->addButton("§3Wood➟Cutter\n2$", 1, "http://avengetech.me/items/17-0.png");
+			$form->addButton("§bMiner\n$0.5", 1, "http://avengetech.me/items/1-0.png");
+			$form->addButton("§3Melon Farmer\n5$", 1, "http://avengetech.me/items/103-0.png");
+			$form->addButton("Pumpkin Farmer\n6$", 1, "http://avengetech.me/items/86-0.png");
 			$form->sendToPlayer($player);
 			return $form;
 	}
@@ -230,9 +224,9 @@ class EconomyJob extends PluginBase implements Listener{
 				break;
 			}
 		});
-		$form->setTitle("Job Info");
-		$form->setContent("JobUI\n\nCreate By XSOAP\nSoapers33\ngithub.com/xSoapers\nVersion TWICE\n\n§bCopyright XSOAP");
-		$form->addButton("Okey!");	
+		$form->setTitle("§l§3Job Info");
+		$form->setContent("§bJobUI\n§eDo your job to make money");
+		$form->addButton("§cExit!");	
 		$form->sendToPlayer($player);
 	}
 }
