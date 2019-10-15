@@ -231,7 +231,7 @@ class EconomyJob extends PluginBase implements Listener{
 			}
 		});
 		$form->setTitle("Job Info");
-		$form->setContent("JobUI\n\nCreate By XSOAP\nSoapers33\ngithub.com/xSoapers\nVersion TWICE\n\n§bCopyright XSOAP");
+		$form->setContent("JobUI\n\nThank You For\nUse JobUI\ngithub.com/xSoapers\nVersion: TWICE\n\n§bCopyright All Right Resrerved");
 		$form->addButton("Okey!");	
 		$form->sendToPlayer($player);
 	}
