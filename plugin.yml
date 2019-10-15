@@ -16,7 +16,7 @@ author: onebone, XSOAP
 
 commands:
  job:
-  description: JobUI By xSoap
+  description: JobUI
   usage: /job <join|retire|list|me>
   permission: economyjob.command.job
 permissions:
