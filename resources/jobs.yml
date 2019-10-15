@@ -9,6 +9,15 @@ tree-cutter:
 miner:
   1:0:break: 1
   4:0:break: 1
+  14:0:break: 2
+  15:0:break: 2
+  16:0:break: 2
+  21:0:break: 2
+  56:0:break: 5
+  73:0:break: 2
+  74:0:break: 2
+  129:0:break: 2
+  153:0:break: 2
 melon:
   103:0:break: 5
 pumpkin:
@@ -36,6 +45,4 @@ flower:
   38:6:break: 1
   38:7:break: 1
   38:8:break: 1
-
-
 ...
